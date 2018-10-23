@@ -1,2 +1,4 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActiveRecord::Base
+  def index
+  end
 end
