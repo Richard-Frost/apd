@@ -1,5 +1,11 @@
 class Family < ActiveRecord::Base
-  has_many :family_members
-  has_many :children, through: :family_members
-  has_many :parents, through: :family_members
+  
+  has_many :parents
+  has_many :children
+  has_many :others
+  belongs_to :child
+  belongs_to :parent
+  belongs_to :other
+
 end
+
