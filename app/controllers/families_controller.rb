@@ -10,13 +10,13 @@ class FamiliesController < ApplicationController
   end
 
   def create
-    @family = Family.create(family_params)
-    binding.pry
+    @family = Family.new(family_params)
+    @family.save
     redirect_to family_path(@family.id)
   end
 
   def show
-    @family = Family.find(1)
+    @family = Family.find(params[:id])
     binding.pry
   end
 
