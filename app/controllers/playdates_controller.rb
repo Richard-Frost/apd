@@ -1,4 +1,4 @@
-class PlaydatesController < ActionController::Base
+class PlaydatesController < ApplicationController
 
   def index
   end
