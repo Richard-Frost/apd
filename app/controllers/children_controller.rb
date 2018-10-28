@@ -1,4 +1,6 @@
-class ChildrenController < ActionController::Base
+class ChildrenController < ApplicationController
+
+  before_action :require_login
 
   def index
   end

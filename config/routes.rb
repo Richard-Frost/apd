@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :parents, only: [:new, :create]
   resources :playdates
   resources :sessions, only: [:new, :create]
+  get '/signup' => 'families#new'
 end
 

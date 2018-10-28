@@ -1,5 +1,9 @@
 class FamiliesController < ApplicationController
 
+  before_action :require_login
+  skip_before_action :require_login, only: [:new, :create]
+
+
   def index
   end
 
@@ -17,7 +21,6 @@ class FamiliesController < ApplicationController
 
   def show
     @family = Family.find(params[:id])
-    binding.pry
   end
 
   def edit
@@ -27,8 +30,7 @@ class FamiliesController < ApplicationController
   end
 
   def family_params
-    params.require(:family).permit(parents_attributes: [:name, :email,:password], 
-                                   children_attributes: [:name, :age])
+    params.require(:family).permit(parents_attributes: [:name, :email,:password], children_attributes: [:name, :age])
   end
 
 end

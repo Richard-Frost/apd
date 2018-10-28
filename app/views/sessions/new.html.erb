@@ -1,0 +1,7 @@
+
+<%= form_tag ({controller: 'sessions', action: 'create',method: 'post'}) do %>
+   <%= %>
+  <%= label_tag('family[email]', "Email") %>
+  <%= text_field_tag('family[email]') %>
+  <input type=submit value='Sign In'>
+<%end%>
